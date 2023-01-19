@@ -37,6 +37,97 @@
         margin-left: auto;
         margin-right: auto;
       }
+
+      body.window{
+        font-family: "MS Sans Serif",Tahoma,Verdana,Segoe,sans-serif;
+        width:100%;
+        height:100%;
+        margin:0;
+        padding: 0;
+        padding-top: 10em;
+      	position: relative;
+        text-align:center;
+        background-color: teal;
+      }
+      h1.window{
+        color: #ffffff;
+        padding: 1em;
+      }
+      #openPopUp{
+        text-align:center;
+      }
+      a#openPopUp:hover{
+        cursor: pointer;
+      }
+      .popup{
+        position: fixed;
+        top: -100vh;
+        left: 0;
+        z-index: 9999999;
+        background: rgba(0,0,0, 0.3);
+        width: 100vw;
+        height: 100vh;
+        opacity: 0;
+      }
+      .popup .popUpContainer{
+        box-shadow: 1px 1px 0 0 #424242;
+        border: 3px solid silver;
+        border-radius: 4px;
+        width: 441px;
+        position: fixed;
+        left: 50%;
+        top: -100vh;
+        margin-left: -250px;
+        background-color: #08216b;
+        background-image: linear-gradient(to right,#08216b,#a5cef7);
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        z-index: 9999999;
+      }
+      .popup h2{
+        padding: 0.1em;
+        text-align: left;
+        color: white;
+        margin: 0;
+        font-weight: 500;
+      }
+      .popup article{
+      	height: 276px;
+        background-color: silver;
+        background: url(https://raw.githubusercontent.com/taffyhound/aaronmeyer-io-site/main/images/contact.gif)
+      }
+      .popup a.closePopUp{
+        font-family: "MS Sans Serif",Tahoma,Verdana,Segoe,sans-serif;
+        color: #424242;
+        position: absolute;
+        top: 0.2em;
+        right: 0.375em;
+        margin: 0;
+        padding: 0;
+        font-size: 1.2em;
+        text-decoration: none;
+        border-width: 2px;
+        border-style: outset;
+        border-right-color: #424242;
+        border-bottom-color: #424242;
+        background: silver;
+        color: black;
+        padding: 0 4px 3px;
+        border-radius: 1px;
+      }
+      .popup a:hover{
+        border: 2px inset #fff;
+        color: #424242;
+        box-shadow: -1px -1px #000;
+      }
+      .popup:target{
+        opacity: 1;
+        top: 0;
+      }
+      .popup:target .popUpContainer{
+        top: 30vh;
+      }
     </STYLE>
   </HEAD>
 
@@ -68,7 +159,7 @@
               <td colspan="3">
                 <table class="links">
                   <tr>
-                    <td><a href="mailto:hello@aaronmeyer.io"><img style="height: 50px" src="images/email1.gif" alt="A 90's style 3D email graphic with rotating letters"></a></td>
+                    <td class="window"><a href="#popUp" id="openPopUp"><img src="https://raw.githubusercontent.com/taffyhound/aaronmeyer-io-site/main/images/email1.gif"alt="A 90's style 3D email graphic with rotating letters"></a></td>
                     <td><a href="https://vis.social/@taffyhound"><img style="height: 50px" src="images/mastodon.png" alt="A pixelated Mastodon logo"></a></td>
                     <td><a href="https://keybase.io/taffyhound"><img style="height: 50px" src="images/keybase1.png" alt="A pixelated Keybase logo"></a></td>
                 </table>
@@ -80,4 +171,17 @@
       </td></tr>
     </table>
   </BODY>
+
+  <ASIDE id="popUp" class="popup">
+      <div class="popUpContainer">
+         <header>
+          <a href="#!" class="closePopUp">x</a>
+          <h2>Email me<h2>
+         </header>
+        <article>
+
+        </article>
+     </div>
+  </ASIDE>
+
 </HTML>
