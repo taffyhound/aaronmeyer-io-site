@@ -37,9 +37,22 @@
         margin-left: auto;
         margin-right: auto;
       }
-
+      @font-face {
+        font-family: Win95;
+        src:url('fonts/MS_Sans_Serif_8pt.woff2') format('woff2');
+        src:url('fonts/MS_Sans_Serif_8pt.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: Win95;
+        src:url('fonts/MS_Sans_Serif_8pt_bold.woff2') format('woff2');
+        src:url('fonts/MS_Sans_Serif_8pt_bold.woff') format('woff');
+        font-weight: bold;
+        font-style: normal;
+      }
       body.window{
-        font-family: "MS Sans Serif",Tahoma,Verdana,Segoe,sans-serif;
+        font-family: Win95,"MS Sans Serif",Tahoma,Verdana,Segoe,sans-serif;
         width:100%;
         height:100%;
         margin:0;
@@ -70,6 +83,7 @@
         opacity: 0;
       }
       .popup .popUpContainer{
+        font-family: Win95,"MS Sans Serif",Tahoma,Verdana,Segoe,sans-serif;
         box-shadow: 1px 1px 0 0 #424242;
         border: 3px solid silver;
         border-radius: 4px;
@@ -86,11 +100,12 @@
         z-index: 9999999;
       }
       .popup h2{
-        padding: 0.1em;
         text-align: left;
+        padding-left: 15px;
+        padding-top: 7px;
         color: white;
         margin: 0;
-        font-weight: 500;
+        font-weight: normal;
       }
       .popup article{
       	height: 276px;
@@ -98,7 +113,7 @@
         background: url(https://raw.githubusercontent.com/taffyhound/aaronmeyer-io-site/main/images/contact.gif)
       }
       .popup a.closePopUp{
-        font-family: "MS Sans Serif",Tahoma,Verdana,Segoe,sans-serif;
+        font-family: Win95,"MS Sans Serif",Tahoma,Verdana,Segoe,sans-serif;
         color: #424242;
         position: absolute;
         top: 0.2em;
