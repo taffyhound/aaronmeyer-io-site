@@ -45,6 +45,7 @@
       padding: 0 2vw;
       box-sizing: border-box;
     }
+<<<<<<< HEAD
 
     .quote {
       font-size: min(calc((100vh - 12vh) * 0.135), 15vw);
@@ -113,3 +114,74 @@
   </div>
 </body>
 </html>
+=======
+
+    .quote {
+      font-size: min(calc((100vh - 12vh) * 0.135), 15vw);
+      line-height: 0.93;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: transparent;
+      background: linear-gradient(to bottom,
+        #6a8758 0%,    /* slimy green */
+        #517347 20%,   /* dark grime green */
+        #3d5b49 35%,   /* mossy green */
+        #4b2a66 60%,   /* plum */
+        #6e3e91 80%,   /* mellowed purple */
+        #2b1a3a 100%   /* existing base */
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      text-align: left;
+      width: 100%;
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.12);  /* cyan-green offset */
+    }
+
+    .author-wrapper {
+      height: 12vh;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      padding: 0 2vw 4vh;
+      box-sizing: border-box;
+    }
+
+    .author {
+      text-shadow: 0 0 6px rgba(255, 255, 255, 0.08);
+      font-size: calc(12vh * 0.45);
+      color: #3d2a4d;
+      white-space: nowrap;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://grainy-gradients.vercel.app/noise.svg');
+      background-size: cover;
+      background-repeat: repeat;
+      opacity: 0.1;
+      pointer-events: none;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body role="main" aria-label="Quote from Kurt Vonnegut">
+  <h1 style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">There is no order in the world around us, we must adapt ourselves to the requirements of chaos instead. – Kurt Vonnegut</h1>
+  <div class="container">
+    <div class="quote-wrapper">
+      <div class="quote">
+        There is no order in the world around us, we must adapt ourselves to the requirements of chaos instead.
+      </div>
+    </div>
+    <div class="author-wrapper">
+      <div class="author">– Kurt Vonnegut</div>
+    </div>
+  </div>
+</body>
+</html>
+
+>>>>>>> 147c4d8 (Site refresh)
